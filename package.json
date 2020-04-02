@@ -1,0 +1,38 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.5",
+    "node": "^13.10.1",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "mocha": "^7.1.1",
+    "should": "^13.2.3",
+    "sinon": "^9.0.1"
+  },
+  "scripts": {
+    "test": "mocha tests/**/*Tests.js",
+    "start": "nodemon app.js",
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": ["node_modules/**/node_modules"],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  },
+  "author": "",
+  "license": "ISC"
+}
